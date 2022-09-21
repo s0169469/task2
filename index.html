@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    <head>
+            <meta charset="UTF-8">
+            <title> Изучение  CSS </title>
+            <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class = "wrapper">
+          <header>
+                 <a href = ""><img src = "https://yandex.ru/images/search?text=картинка+логотип&img_url=http%3A%2F%2Ffikiwiki.com%2Fuploads%2Fposts%2F2022-02%2F1645039759_53-fikiwiki-com-p-kartinki-logotipov-53.jpg&pos=14&rpt=simage&stype=image&lr=35&parent-reqid=1663669937147833-3803233671751860410-sas2-0451-sas-l7-balancer-8080-BAL-8329&source=serp" class = "logo" alt = "логотип"></a>
+                 <hr>
+                 <h1> Работа Кузнецовой Софьи 22-2 </h1>
+                 <hr>
+          </header>
+          <div class = "content">
+              <nav class = "menu">
+                <a href = "#hyperlinks">Список гиперссылок</a>
+                <a href = "#matrix">Таблица</a>
+                <a href = "#form">Форма</a>
+              </nav>
+              <a id="hyperlinks"></a>
+              <h2> Список гиперссылок </h2>
+              <ol>
+                <li><a href="http://example.com/">Абсолютная гиперссылка на главную страницу сайта</a></li>
+                <li><a href="https://example.com/">Абсолютная в протоколе https</a></li>
+                <li><a href="ftp://example.com">Ссылка на файл на сервере FTP без авторизации</a></li>
+                <li><a href="ftp://example.com/user:12345@example.com">С авторизацией</a></li>
+                <li><a href="http://example.com/page#about">Фрагмент страницы некоторого сайта</a></li>
+                <li><a href="#section1">Фрагмент текущей страницы</a></li>
+                <li><a href="vk.ru/?phone=mobile&amp;phone=station">Ссылка с двумя параметрами в URI</a></li>
+                <li><a title="Will be open" href="#section2">Page 2</a> <br /><a title="Will be open" href="#section3">Page 3</a> <br /><a title="Will be open" href="#section4">Page 4</a></li>
+                <li><a>Ссылка без href</a></li>
+                <li><a href="#!">С пустым href.При переходе по ней не обновит страницу и не прокрутит вверх</a></li>
+                <li><a href="http://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+                <li><a href="http://2ch.hk" rel="nofollow"><!--noindex-->Ссылка, запрещенная для индексации поисковиками<!--/noindex--></a></li>
+                <li> <p> Контекстная ссылка <a href = "http://example.com">внутри</a> абзаца</p></li>
+                <li><a href="http://example.com"><img src="file:///C:/Users/user/AppData/Local/Temp/Temp2_1.zip/1/image.jpg" width="50" 
+   height="50" alt="Ссылка-изображение"></a></li>
+                <li><img src="file:///C:/Users/user/AppData/Local/Temp/Temp2_1.zip/1/image.jpg" width="100" height="100" alt="Ссылки из прямоугольных и круглых областей картинки" usemap="#mapmap">
+                <map name = "mapmap">
+                  <area shape="circle" coords="50,50,20" href="http://flowers.com" alt="flower">
+                  <area shape="rect" coords="80,0,100,100" href="http://forest.com" alt="forest">
+                  </map>
+                </li>
+                <li><a href="page">Относительная на страницу в текущем каталоге</a></li>
+                <li><a href="./about/page">Относительная на страницу в каталоге about</a></li>
+                <li><a href="../page">Относительная на страницу в каталоге уровнем выше текущего</a></li>
+                <li><a href="../../page">Относительная на страницу в каталоге двумя уровнями выше текущего</a></li>
+                <li><a href="/">Сокращенная ссылка на главную</a></li>
+                <li><a href="/pages/page">Сокращенная ссылка на внутреннюю</a></li>
+              </ol>
+              <a id="table"></a>
+                <table class="tabletask">
+                <caption>Типы данных в с++</caption>
+                    <tr>
+                        <th>Символьный</th>
+                        <th colspan = "2">Целочисленный</th>
+                        <th colspan = "2">С плавающей точкой</th>
+                        <th>Логический</th>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td>int</td>
+                        <td>long long</td>
+                        <td>float</td>
+                        <td>double</td>
+                        <td>bool</td>
+                    </tr>
+                    <tr>
+                        <td>2B</td>
+                        <td>4B</td>
+                        <td>8B</td>
+                        <td>4B</td>
+                        <td>8B</td>
+                        <td>1B</td>
+                    </tr>
+                    <tr>
+                        <td>Символы из определенной таблицы кодировки</td>
+                        <td colspan = "2">Целые числа</td>
+                        <td colspan = "2">Вещественные числа</td>
+                        <td>Только два значения - правда и ложь</td>
+                    </tr>
+                </table>
+                
+                
+              <h2> Форма </h2>
+              <a id = "form"></a>
+              <form action="http://anketa.com"
+               method="POST">
+                  <label>
+                    Введите ФИО:<br/>
+                    <input name="field-name"
+                    value="Кузнецова Софья Николаевна" />
+                  </label><br/>
+                  <label>
+                    Поле ввода e-mail:<br/>
+                    <input name ="field-email"
+                    type = "email"
+                    placeholder = "введите адрес электронной почты" />
+                  </label><br/>
+                  <label>
+                    Введите дату Вашего рождения:<br/>
+                    <input name = "field-date"
+                    value = "2003-09-13"
+                    type = "date" />
+                  </label><br/>
+                  Укажите Ваш пол:<br/>
+                  <label><input type="radio" checked="checked"
+                    name="radio-group-1" value="Значение1" />
+                    Женский</label>
+                  <label><input type="radio"
+                    name="radio-group-2" value="Значение2" />
+                    Мужской</label><br/>
+                    Сколько у Вас конечностей?:<br/>
+                  <label><input type="radio" checked="checked"
+                    name="radio-group-1" value="Значение1" />
+                  0</label>
+                  <label><input type="radio"
+                    name="radio-group-2" value="Значение2" />
+                  1</label>
+                  <label><input type="radio"
+                    name="radio-group-3" value="Значение3" />
+                  2</label>
+                  <label><input type="radio"
+                    name="radio-group-4" value="Значение4" />
+                  3</label>
+                  <label><input type="radio"
+                    name="radio-group-5" value="Значение5" />
+                  4</label>
+                  <br/>
+                  <label>
+                    Какие сверхспособности вы имеете?:<br/>
+                    <select name="field-name-сверх">
+                    <option value="Значение1">Бессмертие</option>
+                    <option value="Значение2" selected="selected">Прохождение сквозь стены</option>
+                    <option value="Значение3">Левитация</option>
+                    </select>
+                  </label><br/>
+                  <label>
+                    Ваша биография:<br />
+                    <textarea name="field-name-биогр">Расскажите о себе...</textarea>
+                  </label><br />
+                    Ознакомьтесь с контрактом:<br/>
+                  <label>
+                    <input type="checkbox" checked="checked"
+                    name="check-1" />
+                    С контрактом ознакомлен(а)
+                  </label><br/>
+                    <input type="submit" value="Отправить" />
+              </form>
+              <footer>
+                <a id="footer"></a>
+                <p>Кузнецова Софья kuznetsovasf@yandex.ru</p>
+              </footer>
+            </div>
+          </div>
+    </body>
+
+</html>
